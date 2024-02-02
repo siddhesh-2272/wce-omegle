@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font: 13px Helvetica, Arial;
+    background: black;
+    background-size: cover;
+    height: 100%;
+    width: auto;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
+
+#bodyDiv {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: auto;
+    margin: 0;
+    font: 13px Helvetica, Arial;
+}
+
+
+.heading {
+    text-align: center;
+}
+
+form {
+    position: relative;
+    width: 144.4%;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    height: 100%;
+    box-shadow: 0 0 60px rgba(229, 71, 71, 0.5), 0 0 40px rgba(0, 213, 255, 0.8);
+}
+
+form input {
+    border: 0;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    width: 93%;
+    margin: 0;
+    float: left;
+    height: 100%;
+
+}
+
+form input:focus {
+    outline: none;
+}
+
+form button {
+    height: 100%;
+    width: 7%;
+    height: 100%;
+    border: 0;
+    padding: 10px;
+    margin: 0;
+    border-bottom-right-radius: 5px;
+    background: #e0e2e5;
+    pointer-events: none;
+    position: relative;
+
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+#outerdiv {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-top: 1.3%;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: auto;
+
+}
+
+
+#messagediv {
+    /*overflow: hidden;*/
+    width: 65%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#mydiv {
+    /*width: 12%;*/
+    float: right;
+    /*margin-right: 0%;*/
+    /*margin-left: auto;*/
+}
+
+#outerdiv img.emojione {
+    height: 18px;
+    width: auto;
+}
+
+#outerdiv img.emojioneemoji {
+    height: 18px;
+    width: auto;
+}
+
+#outerdiv img {
+    width: 100%;
+    max-width: 130px;
+    height: auto;
+    border-radius: 65px;
+}
+
+
+
+#messages {
+    overflow-y: auto;
+    position: relative;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.836);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    word-wrap: break-word;
+    /* transform: scale(1); */
+    transition: height 0.3s ease-in-out, width 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 0 60px rgba(229, 71, 71, 0.5), 0 0 40px rgba(0, 213, 255, 0.8);
+}
+
+
+
+
+#messages .me {
+    padding: 5px 10px;
+    width: max-content;
+    margin-left: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    max-width: 90%;
+    font-size: 1.2em;
+    /* background: #f72702; */
+}
+
+#messages .partner {
+    padding: 5px 10px;
+    width: max-content;
+    margin-right: auto;
+    max-width: 90%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1.2em;
+
+}
+
+.emoji {
+    height: 18px;
+}
+
+#newMessage {
+    width: 70%;
+    height: 5%;
+}
+
+
+
+
+#m {
+    pointer-events: none;
+    font-size: 1.5em;
+    background: #e0e2e5;
+}
+
+#messages::-webkit-scrollbar {
+    width: 1em;
+}
+
+#messages::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #9b4949;
+    outline: 1px solid #9b4949;
+}
+
+#canvas {
+    position: absolute;
+    z-index: 1;
+}
+
+#istyping {
+    color: white;
+    visibility: hidden;
+}
+
+
+div.emojionearea {
+    width: 92%;
+    float: left;
+}
+
+div.emojionearea-inline {
+    width: 92%;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+h2,
+h3 {
+    font-size: medium;
+}
+
+#m {
+    color: initial;
+    font-size: 1.2em;
+}
+
+#canvas {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* ======================= custom css  ======================== */
+.box1 {
+    background: #000000;
+    /* fallback for old browsers */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box1 img {
+    display: block;
+    margin: auto;
+}
+
+.mid {
+    text-align: center;
+
+}
+
+.partner {
+    background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    /* Adjust the size as needed */
+
+    animation: gradient 15s ease infinite;
+    color: #000000;
+    margin-bottom: 3px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ======================= custom css  ======================== */
+
+/* ... Your existing styles ... */
+
+/* Combine all styles into a single media query */
+@media only screen and (max-width: 500px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    body {
+        box-shadow: none;
+    }
+
+    .boxhd {
+
+        margin: 0;
+        width: 100vw;
+    }
+
+    .headtitle {
+        padding: 0;
+        font-size: 35px;
+        width: 100vw;
+    }
+
+    .tagline {
+        width: 100vw;
+        font-size: 20px;
+    }
+
+    form {
+        box-shadow: none;
+    }
+
+    #outerdiv {
+        flex-direction: column-reverse;
+    }
+
+    #messagediv {
+        width: 100%;
+        overflow: hidden;
+        /* Ensure messages are visible when the keyboard is open */
+    }
+
+    #partnerdiv,
+    #mydiv {
+        float: none;
+        width: 100%;
+        text-align: center;
+        display: none;
+        /* Hide myinfo and partnerinfo on mobile */
+    }
+
+    #partnerdiv img,
+    #mydiv img {
+        width: 50%;
+        max-width: 100px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 50%;
+    }
+
+    #partnerdiv h3,
+    #mydiv h3 {
+        margin: 5px 0;
+    }
+
+    #newMessage {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        bottom: 4;
+        left: 5;
+        background-color: #333;
+        padding: 10px;
+        box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .temp {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        width: 100vw;
+    }
+
+    #m {
+        flex: 1;
+        padding: 8px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        background-color: #fff;
+    }
+
+    #submitButton {
+        width: 80px;
+        font-size: 1.2em;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        /* Add margin for spacing */
+    }
+
+    #canvas {
+        display: none;
+    }
+
+    #istyping {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+
+    }
+
+    #messages {
+        box-shadow: none;
+    }
+
+    .partner {
+        margin-top: 1px;
+        background-color: #03e6ff;
+        color: #000000;
+        width: 100vw;
+
+    }
+}

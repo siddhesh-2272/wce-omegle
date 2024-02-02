@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Chat - WCE Omegle</title>
+	<link rel="icon" href="./assets/img/fav.png" type="image/x-icon" />
+	<link rel="stylesheet" media="screen" href="./CSS/bootstrap.min.css" />
+	<link rel="stylesheet" media="screen" href="./CSS/main.css" />
+
+	<link rel="stylesheet" href="/CSS/emojionearea.min.css">
+</head>
+
+<body>
+	<canvas id="canvas"></canvas>
+
+	<div id="bodyDiv">
+		<br><br><br>
+		<div class="row">
+			<div class="col-xs-6 col-sm-12 boxhd">
+				<h1 class="text-center no-margin headtitle">WCE Omegle ❤️</h1>
+			</div>
+			<div class="top-right col-xs-6 col-sm-12">
+				<h3 class="text-center mar tagline" style="margin-top: 10px;">Chat with someone random</h3>
+			</div>
+		</div>
+		<div id="outerdiv">
+
+			<div id="partnerdiv" class="col-sm-2 box1">
+				<span id="partnerinfo">
+					<div class="align-left">
+						<h3 class="mid" style="font-size: 20px;">You're talking to:</h3>
+						<br>
+						<h3 id="partnername" style="font-size: 20px;"></h3>
+						<br>
+					</div>
+					<img id="partnerimg" src="https://xsgames.co/randomusers/avatar.php?g=pixel">
+				</span>
+			</div>
+
+			<div id="mydiv" class="col-sm-2 box1">
+				<span id="myinfo">
+					<div class="align-left">
+						<h3 class="mid" style="font-size: 20px;">You are:</h3>
+						<br>
+						<h3 id="myname" style="font-size: 20px;"></h3>
+						<br>
+					</div>
+					<img id="myimg" src="https://api.multiavatar.com/Binx Bond.png" class="mid">
+				</span>
+			</div>
+			<div id="messagediv">
+				<div id="messages"></div>
+
+				<div id="newMessage" style="height: 40px; width: 691px;">
+					<form id='msgform' onsubmit="return submitForm()">
+						<div class="temp">
+
+							<input type="text" id="m" autocomplete="off" placeholder="Wait for partner to join" />
+							<button id="submitButton"> <i class="fa fa-send-o">Send</i></button>
+
+						</div>
+						<label id="istyping">Partner is typing...</label>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/JS/chat.js"></script>
+</body>
+
+</html>
