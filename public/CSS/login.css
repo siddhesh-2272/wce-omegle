@@ -1,11 +1,21 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url("../assets/img/bg.jpg");
+    background-image: url("../assets/img/bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill: none;
     margin: 0;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Align content to the right side */
     height: 100vh;
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    overflow-y: hidden;
 }
 
 .login-container {
@@ -20,7 +30,7 @@ body {
 }
 
 .login-container:hover {
-    height: 180px;
+    height: 188px;
     width: 305px;
     transform: scale(1.05);
 }
@@ -63,14 +73,19 @@ input:focus {
 
 button {
     padding: 10px 15px;
-    background-color: #4285f4;
-    color: #fff;
+    background-color: aqua;
+    color: #000000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
     transition: background-color 0.3s ease-in-out;
+    font-weight: bolder;
 }
 
 button:hover {
-    background-color: #3367d6;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.8), 0 0 15px rgba(0, 255, 255, 0.8);
+    /* Adjust the shadow color and spread as needed */
+    transition: box-shadow 0.3s ease-in-out;
 }

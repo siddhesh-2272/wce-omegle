@@ -58,9 +58,7 @@ const postLoginPage = async(req, res) => {
             },
         },
         { upsert: true, new: true });
-
-        res.cookie('u', u, { httpOnly: true, maxAge: 5 * 60 * 1000, secure: true, sameSite: 'lax'});
-
+        res.cookie('u', u, { httpOnly: true, maxAge: 5 * 60 * 1000 });
         return res.redirect('/verify');
     } catch (error) {
         console.log("Post Login:", error.message);
@@ -97,9 +95,7 @@ const postVerifyPage = async(req, res) => {
         }
         decodedU.verified = true;
         const u = jwt.sign({email, verified: true}, process.env.JWT_SECRET);
-
-        res.cookie('u', u, {httpOnly: true, secure: true, sameSite: 'lax'});
-
+        res.cookie('u', u, {httpOnly: true});
         return res.redirect('/chat');
     } catch (error) {
         console.log("Post verify", error.message);

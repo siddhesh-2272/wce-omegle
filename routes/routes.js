@@ -37,10 +37,6 @@ router.post('/verify',postVerifyLimiter, authMiddleware1, postVerifyPage);
 
 router.get('/chat', authMiddleware2, getChatPage);
 
-router.get('/health', (req, res) => {
-    return res.status(200).send("OK");
-});
-
 router.get('/logout', getLogout);
 
 

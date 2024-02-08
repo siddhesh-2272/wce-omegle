@@ -1,8 +1,9 @@
 const FORM_INPUT_DISABLED_COLOR = '#000000';
 const FORM_INPUT_MSG_COLOR = '#ffffff';
-const FORM_INPUT_SEND_COLOR = '#0000ff';
-const MSG_MINE_COLOR = '#af1d1d';
-const MSG_PARTNER_COLOR = '#f202f2';
+const FORM_INPUT_SEND_COLOR = '#f6166c';
+const MSG_MINE_COLOR = 'linear-gradient(to bottom, #ff99ff 0%, #ff0066 100%)';
+
+const MSG_PARTNER_COLOR = 'linear-gradient(to bottom left, #33ccff 0%, #3333cc 100%)';
 
 let socket = io('/');
 

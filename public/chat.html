@@ -4,12 +4,28 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.css"
+		integrity="sha512-0Nyh7Nf4sn+T48aTb6VFkhJe0FzzcOlqqZMahy/rhZ8Ii5Q9ZXG/1CbunUuEbfgxqsQfWXjnErKZosDSHVKQhQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<title>Chat - WCE Omegle</title>
-	<link rel="icon" href="./assets/img/fav.png" type="image/x-icon" />
 	<link rel="stylesheet" media="screen" href="./CSS/bootstrap.min.css" />
+	<link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
 	<link rel="stylesheet" media="screen" href="./CSS/main.css" />
 
 	<link rel="stylesheet" href="/CSS/emojionearea.min.css">
+	<style>
+		/* Your existing styles */
+
+		.center-text {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			/* Adjust as needed */
+		}
+
+		/* Your existing styles */
+	</style>
 </head>
 
 <body>
@@ -19,7 +35,7 @@
 		<br><br><br>
 		<div class="row">
 			<div class="col-xs-6 col-sm-12 boxhd">
-				<h1 class="text-center no-margin headtitle">WCE Omegle ❤️</h1>
+				<h1 class="text-center no-margin headtitle">Mapadi-Sanghatana💝</h1>
 			</div>
 			<div class="top-right col-xs-6 col-sm-12">
 				<h3 class="text-center mar tagline" style="margin-top: 10px;">Chat with someone random</h3>
@@ -27,10 +43,13 @@
 		</div>
 		<div id="outerdiv">
 
+
+
+			<!-- partner intro  -->
 			<div id="partnerdiv" class="col-sm-2 box1">
 				<span id="partnerinfo">
 					<div class="align-left">
-						<h3 class="mid" style="font-size: 20px;">You're talking to:</h3>
+						<h3 class="mid" style="font-size: 20px; ">You're talking to:</h3>
 						<br>
 						<h3 id="partnername" style="font-size: 20px;"></h3>
 						<br>
@@ -38,7 +57,7 @@
 					<img id="partnerimg" src="https://xsgames.co/randomusers/avatar.php?g=pixel">
 				</span>
 			</div>
-
+			<!-- user intro -->
 			<div id="mydiv" class="col-sm-2 box1">
 				<span id="myinfo">
 					<div class="align-left">
@@ -50,24 +69,40 @@
 					<img id="myimg" src="https://api.multiavatar.com/Binx Bond.png" class="mid">
 				</span>
 			</div>
-			<div id="messagediv">
-				<div id="messages"></div>
 
-				<div id="newMessage" style="height: 40px; width: 691px;">
+
+
+
+			<div id="messagediv">
+
+				<div id="messages"></div>
+				<label id="istyping">Partner is typing...</label>
+				<div id="newMessage">
 					<form id='msgform' onsubmit="return submitForm()">
 						<div class="temp">
 
 							<input type="text" id="m" autocomplete="off" placeholder="Wait for partner to join" />
-							<button id="submitButton"> <i class="fa fa-send-o">Send</i></button>
+							<button id="submitButton"> Send</button>
 
 						</div>
-						<label id="istyping">Partner is typing...</label>
+
 					</form>
 				</div>
+
+
 			</div>
+
+
+
 
 		</div>
 	</div>
+
+
+
+
+
+
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="/JS/chat.js"></script>
 </body>
